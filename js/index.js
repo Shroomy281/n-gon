@@ -1281,6 +1281,15 @@ const sound = {
 //**********************************************************************
 simulation.loop = simulation.normalLoop;
 
+function playSound(id) {
+    //play sound
+    if (document.getElementById(id)) {
+        var sound = document.getElementById(id); //setup audio
+        sound.currentTime = 0; //reset position of playback to zero  //sound.load();
+        sound.play();
+    }
+}
+
 function cycle() {
     if (!simulation.paused) requestAnimationFrame(cycle);
     const now = Date.now();
