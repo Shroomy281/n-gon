@@ -3387,6 +3387,7 @@ const level = {
 
     },
     sewers() {
+        playSound("sewertheme")
         const button1 = level.button(6600, 2675)
         // const hazard = level.hazard(4550, 2750, 4550, 150)
         const hazard = level.hazard(simulation.isHorizontalFlipped ? -4550 - 4550 : 4550, 2750, 4550, 150)
