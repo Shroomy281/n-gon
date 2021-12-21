@@ -3391,7 +3391,6 @@ const level = {
         // const hazard = level.hazard(4550, 2750, 4550, 150)
         const hazard = level.hazard(simulation.isHorizontalFlipped ? -4550 - 4550 : 4550, 2750, 4550, 150)
         let balance1, balance2, balance3, balance4, rotor
-        playSound("sewertheme")
 
         const drip1 = level.drip(6100, 1900, 2900, 100) // drip(x, yMin, yMax, period = 100, color = "hsla(160, 100%, 35%, 0.5)") {
         const drip2 = level.drip(7300, 1900, 2900, 150)
@@ -3438,6 +3437,7 @@ const level = {
         simulation.zoomTransition(level.defaultZoom)
         document.body.style.backgroundColor = "hsl(138, 3%, 74%)";
         powerUps.spawnStartingPowerUps(3475, 1775);
+        playSound("sewertheme");
         spawn.debris(4575, 2550, 1600, 9); //16 debris per level
         spawn.debris(7000, 2550, 2000, 7); //16 debris per level
 
